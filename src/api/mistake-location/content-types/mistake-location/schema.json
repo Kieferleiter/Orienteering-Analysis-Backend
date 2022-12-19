@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mistake_locations",
+  "info": {
+    "singularName": "mistake-location",
+    "pluralName": "mistake-locations",
+    "displayName": "MistakeLocation"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "controls": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::control.control",
+      "mappedBy": "mistakeLocation"
+    }
+  }
+}

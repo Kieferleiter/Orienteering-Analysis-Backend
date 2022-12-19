@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "controls",
+  "info": {
+    "singularName": "control",
+    "pluralName": "controls",
+    "displayName": "Control",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number": {
+      "type": "integer",
+      "required": false,
+      "min": 1
+    },
+    "mistake": {
+      "type": "boolean",
+      "required": false,
+      "default": true
+    },
+    "timeLost": {
+      "type": "time"
+    },
+    "competition": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::competition.competition",
+      "inversedBy": "controls"
+    },
+    "mistakeSpeed": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mistake-speed.mistake-speed",
+      "inversedBy": "controls"
+    },
+    "mistakeLocation": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mistake-location.mistake-location",
+      "inversedBy": "controls"
+    },
+    "mistakeType": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mistake-type.mistake-type",
+      "inversedBy": "controls"
+    },
+    "mistakeCause": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mistake-cause.mistake-cause",
+      "inversedBy": "controls"
+    }
+  }
+}

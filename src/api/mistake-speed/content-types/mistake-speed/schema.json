@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mistake_speeds",
+  "info": {
+    "singularName": "mistake-speed",
+    "pluralName": "mistake-speeds",
+    "displayName": "MistakeSpeed",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "controls": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::control.control",
+      "mappedBy": "mistakeSpeed"
+    }
+  }
+}

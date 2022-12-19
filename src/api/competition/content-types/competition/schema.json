@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "competitions",
+  "info": {
+    "singularName": "competition",
+    "pluralName": "competitions",
+    "displayName": "Competition",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "length": {
+      "type": "decimal",
+      "required": true
+    },
+    "elevation": {
+      "type": "integer",
+      "required": true
+    },
+    "time": {
+      "type": "time",
+      "required": true
+    },
+    "winningTime": {
+      "type": "time",
+      "required": true
+    },
+    "controls": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::control.control",
+      "mappedBy": "competition"
+    },
+    "extraDetails": {
+      "type": "text"
+    },
+    "discipline": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::discipline.discipline",
+      "inversedBy": "competitions"
+    }
+  }
+}

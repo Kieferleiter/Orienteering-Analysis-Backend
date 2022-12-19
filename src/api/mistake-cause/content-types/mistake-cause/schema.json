@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mistake_causes",
+  "info": {
+    "singularName": "mistake-cause",
+    "pluralName": "mistake-causes",
+    "displayName": "MistakeCause",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "controls": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::control.control",
+      "mappedBy": "mistakeCause"
+    }
+  }
+}

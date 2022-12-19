@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mistake_types",
+  "info": {
+    "singularName": "mistake-type",
+    "pluralName": "mistake-types",
+    "displayName": "MistakeType"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "controls": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::control.control",
+      "mappedBy": "mistakeType"
+    }
+  }
+}
