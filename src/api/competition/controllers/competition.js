@@ -34,6 +34,13 @@ module.exports = createCoreController('api::competition.competition', ({ strapi 
         }
 
         return response;
+    },
+
+    async controls (ctx) {
+        return strapi.db.query('api::control.control').findMany({
+            where: { competition: ctx.params.id },
+            populate: ['mistakeCause', 'mistakeLocation', 'mistakeSpeed', 'mistakeType']
+        });
     }
 }));
 
