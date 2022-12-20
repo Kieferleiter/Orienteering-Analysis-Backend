@@ -50,6 +50,10 @@
       "relation": "manyToOne",
       "target": "api::competition.discipline",
       "inversedBy": "competitions"
+    },
+    "location": {
+      "type": "string",
+      "required": true
     }
   }
 }
