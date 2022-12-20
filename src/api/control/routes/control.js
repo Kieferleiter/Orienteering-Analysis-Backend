@@ -6,4 +6,6 @@
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::control.control');
+module.exports = createCoreRouter('api::control.control', {
+    only: ['update']
+});

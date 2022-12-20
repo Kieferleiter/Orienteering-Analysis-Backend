@@ -8,9 +8,7 @@ module.exports = {
             //Gets the highest control-number of the chosen competition
             const { number } = await strapi.db.query('api::control.control')
                 .findOne({
-                    where: {
-                        competition: data.competition
-                    },
+                    where: { competition: data.competition },
                     orderBy: { id: 'desc' }
                 });
 
@@ -21,12 +19,8 @@ module.exports = {
                 .findOne({
                     where: {
                         $and: [
-                            {
-                                number: { $gte: data.number }
-                            },
-                            {
-                                competition: data.competition
-                            }
+                            { number: { $gte: data.number } },
+                            { competition: data.competition }
                         ]
                 }});
             if(controlInDB)
