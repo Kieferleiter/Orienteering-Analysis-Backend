@@ -17,6 +17,16 @@ module.exports = createCoreController('api::competition.competition', ({ strapi 
             response.data.attributes.time = sanitizeTimestamp(response.data.attributes.time)
             response.data.attributes.winningTime = sanitizeTimestamp(response.data.attributes.winningTime)
         }
+        return response;
+    },
+
+    async find(ctx) {
+        const response = await super.find(ctx);
+
+        for(const element of response.data){
+            element.attributes.time = sanitizeTimestamp(element.attributes.time);
+            element.attributes.winningTime = sanitizeTimestamp(element.attributes.winningTime);
+        }
 
         return response;
     },
