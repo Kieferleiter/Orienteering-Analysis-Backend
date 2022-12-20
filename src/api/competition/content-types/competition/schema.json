@@ -48,7 +48,7 @@
     "discipline": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::discipline.discipline",
+      "target": "api::competition.discipline",
       "inversedBy": "competitions"
     }
   }

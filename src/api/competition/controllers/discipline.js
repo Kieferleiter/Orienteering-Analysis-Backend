@@ -6,4 +6,4 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::discipline.discipline');
+module.exports = createCoreController('api::competition.discipline');
