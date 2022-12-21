@@ -3,17 +3,17 @@ module.exports = {
         {
             method: 'GET',
             path: '/competitions/:id/controls',
-            handler: 'competition.controls',
+            handler: 'control.controls',
         },
         {
             method: 'POST',
             path: '/competitions/:id/controls',
-            handler: 'competition.addControl'
+            handler: 'control.addControl'
         },
         {
             method: 'DELETE',
             path: '/competitions/:id/controls',
-            handler: 'competition.removeLastControl'
+            handler: 'control.removeLastControl'
         }
     ]
 }
