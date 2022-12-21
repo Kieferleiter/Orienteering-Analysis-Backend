@@ -6,4 +6,4 @@
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::mistake-type.mistake-type');
+module.exports = createCoreService('api::control.mistake-type');

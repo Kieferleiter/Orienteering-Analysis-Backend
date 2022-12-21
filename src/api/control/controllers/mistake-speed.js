@@ -6,4 +6,4 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::mistake-speed.mistake-speed');
+module.exports = createCoreController('api::control.mistake-speed');

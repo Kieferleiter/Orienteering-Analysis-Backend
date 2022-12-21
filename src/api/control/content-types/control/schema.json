@@ -34,25 +34,25 @@
     "mistakeSpeed": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::mistake-speed.mistake-speed",
+      "target": "api::control.mistake-speed",
       "inversedBy": "controls"
     },
     "mistakeLocation": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::mistake-location.mistake-location",
+      "target": "api::control.mistake-location",
       "inversedBy": "controls"
     },
     "mistakeType": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::mistake-type.mistake-type",
+      "target": "api::control.mistake-type",
       "inversedBy": "controls"
     },
     "mistakeCause": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::mistake-cause.mistake-cause",
+      "target": "api::control.mistake-cause",
       "inversedBy": "controls"
     }
   }

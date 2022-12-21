@@ -6,4 +6,4 @@
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::mistake-location.mistake-location');
+module.exports = createCoreRouter('api::control.mistake-location');

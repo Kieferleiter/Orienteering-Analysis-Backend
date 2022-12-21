@@ -6,4 +6,4 @@
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::mistake-location.mistake-location');
+module.exports = createCoreService('api::control.mistake-location');
