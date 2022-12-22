@@ -23,6 +23,11 @@ module.exports = {
             config: {
                 policies: ['competition-exists']
             }
+        },
+        {
+            method: 'GET',
+            path: '/analytics/mistakes',
+            handler:'analytics.mistakes'
         }
     ]
 }
